@@ -10,7 +10,6 @@ import { PlatformContextProps } from '../../../shared/src/platform/context'
 import { SettingsCascadeProps } from '../../../shared/src/settings/settings'
 import { WebActionsNavItems, WebCommandListPopoverButton } from '../components/shared'
 import { ThemeProps } from '../../../shared/src/theme'
-import { EventLoggerProps } from '../tracking/eventLogger'
 import { StatusMessagesNavItem } from './StatusMessagesNavItem'
 import { UserNavItem } from './UserNavItem'
 import { CampaignsNavItem } from '../enterprise/campaigns/global/nav/CampaignsNavItem'
@@ -25,6 +24,7 @@ import { Settings } from '../schema/settings.schema'
 import CompassOutlineIcon from 'mdi-react/CompassOutlineIcon'
 import { InsightsNavItem } from '../insights/InsightsNavLink'
 import { AuthenticatedUser } from '../auth'
+import { TelemetryProps } from '../../../shared/src/telemetry/telemetryService'
 
 interface Props
     extends SettingsCascadeProps<Settings>,
@@ -33,7 +33,7 @@ interface Props
         PlatformContextProps<'forceUpdateTooltip' | 'settings'>,
         ThemeProps,
         ThemePreferenceProps,
-        EventLoggerProps,
+        TelemetryProps,
         ActivationProps {
     location: H.Location
     history: H.History
