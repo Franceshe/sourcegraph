@@ -35,7 +35,7 @@ import { PrivateCodeCta } from './PrivateCodeCta'
 import { AuthenticatedUser } from '../../auth'
 import { EnterpriseHomePanels } from '../panels/EnterpriseHomePanels'
 
-interface Props
+export interface SearchPageProps
     extends SettingsCascadeProps<Settings>,
         ThemeProps,
         ThemePreferenceProps,
@@ -74,7 +74,7 @@ const LanguageExampleClicked = (language: string) => (): void =>
 /**
  * The search page
  */
-export const SearchPage: React.FunctionComponent<Props> = props => {
+export const SearchPage: React.FunctionComponent<SearchPageProps> = props => {
     useEffect(() => eventLogger.logViewEvent('Home'))
 
     const codeInsightsEnabled =
